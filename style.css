@@ -1,0 +1,284 @@
+﻿:root {
+    --bg: #f5f5f5;
+    --text: #333;
+    --card-bg: #fff;
+    --sub-card-bg: #fafafa;
+    --border: #ccc;
+    --preview-bg: #222;
+    --preview-text: #eee;
+    --code-bg: #111;
+    --accent: #3b81f4;
+    --accent-hover: #b9c0b9;
+    --danger: #c93c3c;
+    --danger-hover: #a92e2e;
+
+    --json-key: #9cdcfe;
+    --json-string: #ce9178;
+    --json-number: #b5cea8;
+    --json-boolean: #569cd6;
+    --json-null: #569cd6;
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #eaeaea;
+    --card-bg: #1e1e1e;
+    --sub-card-bg: #2a2a2a;
+    --border: #444;
+    --preview-bg: #000;
+    --preview-text: #eee;
+    --code-bg: #111;
+    --accent: #424442;
+    --accent-hover: #888f88;
+    --danger: #d9534f;
+    --danger-hover: #c9302c;
+
+    --json-key: #4fc1ff;
+    --json-string: #d19a66;
+    --json-number: #98c379;
+    --json-boolean: #56b6c2;
+    --json-null: #56b6c2;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6em;
+}
+
+.theme-btn {
+    padding: 6px 12px;
+    background: var(--accent);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+.theme-btn:hover {
+    background: var(--accent-hover);
+}
+
+.primary-btn, button, .theme-btn {
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: #3b82f6;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.primary-btn:hover,
+button:hover,
+.theme-btn:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+.rmRecipe, .rmGem, .rmReq {
+    background: var(--danger);
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.rmRecipe:hover, .rmGem:hover, .rmReq:hover {
+    background: var(--danger-hover);
+}
+
+.empty-state {
+    padding: 30px;
+    border: 2px dashed var(--border);
+    border-radius: 6px;
+    text-align: center;
+    color: var(--text);
+    opacity: 0.7;
+}
+.empty-state p {
+    margin: 0;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: var(--text);
+    opacity: 0.7;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: var(--bg);
+    color: var(--text);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.form-container {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    max-width: 600px;
+    overflow-y: auto;
+    max-height: 85vh;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    box-sizing: border-box;
+    background: var(--sub-card-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: var(--accent-hover);
+}
+
+.preview-container {
+    flex: 1;
+    background: var(--card-bg);
+    color: var(--preview-text);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    max-height: 85vh;
+}
+
+.preview-container h2 {
+    margin-top: 0;
+}
+
+#preview {
+    flex: 1;
+    background: var(--code-bg);
+    padding: 10px;
+    border-radius: 5px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.4em;
+    max-height: 70vh;
+    white-space: pre-wrap;
+    font-family: monospace;
+}
+
+.json-key { color: #9cdcfe; }
+.json-string { color: #ce9178; }
+.json-number { color: #dcdcaa; }
+.json-boolean { color: #569cd6; }
+.json-null { color: #569cd6; }
+.json-tag { color: #4ec9b0; }
+.json-item { color: #c586c0; }
+
+.preview-container button {
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+.recipe-entry {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background: var(--card-bg);
+    overflow: hidden;
+}
+
+.recipe-header {
+    background: var(--sub-card-bg);
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.recipe-header span {
+    font-weight: bold;
+}
+
+.recipe-body {
+    padding: 10px;
+}
+
+.recipe-body.collapsed {
+    display: none;
+}
+
+.toggle-btn {
+    border: none;
+    background: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.gem-entry, .requirement-entry {
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px 0;
+    background: var(--sub-card-bg);
+}
+
+.gem-header, .req-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.rmRecipe, .rmGem, .rmReq {
+    background: var(--danger);
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.rmRecipe:hover, .rmGem:hover, .rmReq:hover {
+    background: var(--danger-hover);
+}
