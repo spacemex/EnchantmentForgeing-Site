@@ -1,6 +1,6 @@
 ﻿const REQUIREMENT_TYPES = ["has_exp_levels", "has_exp_points", "has_enchantment"];
 const MESSAGE_TYPES = ["CHAT", "ACTION"];
-const NAMESPACE = "stardewenchanting";
+const NAMESPACE = "enchantmentforge";
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
@@ -303,7 +303,7 @@ function buildAllRecipes() {
 
         if (id) {
             const recipeJson = {
-                type: "stardewenchanting:forge",
+                type: "enchantmentforge:forge",
                 fuel: fuelVal ? { [fuelType]: fuelVal } : {},
                 tool: toolVal ? { [toolType]: toolVal } : {},
                 gems_to_enchantment: gemsObj
@@ -332,7 +332,7 @@ function downloadDatapack() {
 
     const zip = new JSZip();
     zip.file("pack.mcmeta", JSON.stringify({
-        pack: { pack_format: 15, description: "Generated Stardew Enchanting Recipes" }
+        pack: { pack_format: 15, description: "Generated Enchantment Forge Recipes" }
     }, null, 2));
 
     all.forEach(r => {
@@ -340,7 +340,7 @@ function downloadDatapack() {
     });
 
     zip.generateAsync({ type: "blob" }).then(content => {
-        saveAs(content, "stardewenchanting_datapack.zip");
+        saveAs(content, "enchantmentforge_datapack.zip");
     });
 }
 
